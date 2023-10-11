@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputComponent } from './input/input.component';
-import { MaterialModule } from 'src/Material.Module';
+import { MaterialModule } from './material-module';
+import { AutocompleteComponent } from './component/autocomplete/autocomplete.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    AutocompleteComponent
   ],
   imports: [
     BrowserModule,
