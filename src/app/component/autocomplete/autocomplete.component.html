@@ -2,9 +2,9 @@
 
 <form class="example-form">
     <mat-form-field class="example-full-width">
-        <input matInput [matAutocomplete]="auto" />
+        <input matInput [matAutocomplete]="auto" [formControl]="formcontrol"/>
         <mat-autocomplete autoActiveFirstOption="true" #auto>
-            <mat-option *ngFor="let item of colorArray" value="{{item}}">{{item}}</mat-option>
+            <mat-option *ngFor="let item of filteroptions | async" value="{{item}}">{{item}}</mat-option>
         </mat-autocomplete>
     </mat-form-field>
     
