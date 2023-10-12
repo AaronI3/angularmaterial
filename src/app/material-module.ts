@@ -1,8 +1,10 @@
 import { NgModule } from "@angular/core";
 import { MatInputModule } from "@angular/material/input"
 import { MatAutocompleteModule } from "@angular/material/autocomplete"
-import { MatToolbarModule } from "@angular/material/toolbar"
+
 import { MatMenuModule } from "@angular/material/menu"
+import { MatToolbarModule } from "@angular/material/toolbar"
+
 import { MatIconModule } from "@angular/material/icon"
 import { MatButtonModule } from "@angular/material/button"
 
@@ -10,10 +12,11 @@ import { MatButtonModule } from "@angular/material/button"
 exports:[
     MatInputModule,
     MatAutocompleteModule,
-    MatToolbarModule,
-    MatMenuModule,
+    MatButtonModule,
     MatIconModule,
-    MatButtonModule
+    MatToolbarModule,
+    MatMenuModule
+
 ]
 }) 
 

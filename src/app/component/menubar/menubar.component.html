@@ -1,10 +1,18 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button>
-        <mat-icon>home</mat-icon>
+
+<mat-toolbar color="primary" class="mat-elevation-z7">
+    <!-- this creates the icon at the left in the menu bar -->
+    <button routerLink="" mat-icon-button>
+        <mat-icon>menu</mat-icon>
     </button>
-    <span style="margin-left: 3px;">Material UI Tutorial</span>
-    <span class="spacer"></span>
-    <button mat-button>Home</button>
-    <button mat-button>About</button>
-    <button mat-button>Contact</button>
+
+    <span>Material UI Tutorial</span>
+
+    <!-- menu_bar_spacer adds the empty space and forces buttons to the sides of the page -->
+    <span class="menu_bar_spacer"></span>
+
+    <!-- the buttons that are pressed to navigate -->
+    <button routerLink="" mat-button>Home</button>
+    <button routerLink="input" mat-button>Input</button>
+    <button routerLink="autocomplete" mat-button>Autocomplete</button>
+
 </mat-toolbar>
