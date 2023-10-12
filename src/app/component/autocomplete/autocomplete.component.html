@@ -4,7 +4,7 @@
     <mat-form-field class="example-full-width">
         <input matInput [matAutocomplete]="auto" [formControl]="formcontrol"/>
         <mat-autocomplete autoActiveFirstOption="true" #auto>
-            <mat-option *ngFor="let item of filteroptions | async" value="{{item}}">{{item}}</mat-option>
+            <mat-option *ngFor="let item of filteroptionslist | async" [value]="item.code">{{item.code}} | {{item.name}}</mat-option>
         </mat-autocomplete>
     </mat-form-field>
     
