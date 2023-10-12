@@ -10,13 +10,16 @@
     <!-- menu_bar_spacer adds the empty space and forces buttons to the sides of the page -->
     <span class="menu_bar_spacer"></span>
 
-    <!-- the buttons that are pressed to navigate -->
-    <button routerLink="" mat-button>Home</button>
+
 
     <!-- creating a multileveled button in the menu bar (v3;9:00)-->
     <button [matMenuTriggerFor]="lvl1master" mat-button>Master</button>
+
+    <!-- the buttons that are pressed to navigate -->
+    <button routerLink="" mat-button>Home</button>
     <button routerLink="input" mat-button>Input</button>
     <button routerLink="autocomplete" mat-button>Autocomplete</button>
+    <button mat-raised-button color="warn">Warn</button>
 
     <!-- populating what is in the top layer multileveled button master -->
     <mat-menu #lvl1master="matMenu">
@@ -29,6 +32,12 @@
     <mat-menu #company="matMenu">
         <button mat-menu-item>Sales</button>
         <button mat-menu-item>Shop Floor</button>
-        <button mat-menu-item>Programming</button>
+        <button [matMenuTriggerFor]="coding" mat-menu-item>Programming</button>
+    </mat-menu>
+
+    <!-- populating what is in the third layer in master->company->programming -->
+    <mat-menu #coding="matMenu">
+        <button mat-menu-item>CNC</button>
+        <button mat-menu-item>Software Eng.</button>
     </mat-menu>
 </mat-toolbar>
