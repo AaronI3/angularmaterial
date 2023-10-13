@@ -8,7 +8,7 @@
     <span>Material UI Tutorial</span>
 
     <!-- menu_bar_spacer adds the empty space and forces buttons to the sides of the page -->
-    <span class="menu_bar_spacer"></span>
+    <span class="menu_bar_spacer" >Innovation Industries</span>
 
 
 
@@ -19,7 +19,9 @@
     <button routerLink="" mat-button>Home</button>
     <button routerLink="input" mat-button>Input</button>
     <button routerLink="autocomplete" mat-button>Autocomplete</button>
-    <button mat-raised-button color="warn">Warn</button>
+    <button (click)="badgevisibility()" mat-mini-fab color="warn">
+        <mat-icon matBadge="15" [matBadgeHidden]="badgevisibile" matBadgeSize="small" matBadgeColor="accent">notifications</mat-icon>
+    </button>
 
     <!-- populating what is in the top layer multileveled button master -->
     <mat-menu #lvl1master="matMenu">
