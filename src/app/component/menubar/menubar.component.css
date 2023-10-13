@@ -3,3 +3,13 @@
 
     flex: 1 1 auto;
 }
+.sidnav-container{
+    width:100%;
+}
+.drawer{
+    width:10%;
+}
+.button-container{
+    justify-content:center;
+    text-align: center;
+}

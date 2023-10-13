@@ -43,3 +43,18 @@
         <button mat-menu-item>Software Eng.</button>
     </mat-menu>
 </mat-toolbar>
+<mat-drawer-container class="sidnav-container">
+    <mat-drawer class="drawer" mode="side" opened>
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon>home</mat-icon>
+                Home
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div style="text-align: center; min-height:100%">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
