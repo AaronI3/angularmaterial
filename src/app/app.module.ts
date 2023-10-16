@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MenubarComponent } from './component/menubar/menubar.component';
 
 import { HomeComponent } from './component/home/home.component';
+import { ExpansionPanelComponent } from './component/expansion-panel/expansion-panel.component';
 
 
 
@@ -20,7 +21,8 @@ import { HomeComponent } from './component/home/home.component';
     InputComponent,
     AutocompleteComponent,
     MenubarComponent,
-    HomeComponent
+    HomeComponent,
+    ExpansionPanelComponent
 
   ],
   imports: [

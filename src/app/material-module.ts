@@ -8,6 +8,7 @@ import { MatButtonModule } from "@angular/material/button"
 import { MatBadgeModule } from "@angular/material/badge"
 import { MatSidenavModule } from "@angular/material/sidenav"
 import { MatListModule } from "@angular/material/list"
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
 exports:[
@@ -19,7 +20,8 @@ exports:[
     MatMenuModule,
     MatBadgeModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatExpansionModule
 ]
 }) 
 
