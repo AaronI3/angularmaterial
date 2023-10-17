@@ -5,9 +5,11 @@
 }
 .sidnav-container{
     width:100%;
+    
 }
 .drawer{
     width:10%;
+    background: #222229;
 }
 .button-container{
     justify-content:center;
@@ -15,17 +17,20 @@
 }
 
 
-/* expansion panel title on hover */
 .expansion-panel-1.mat-expansion-panel .mat-expansion-panel-header{
-    background-color: lightblue!important;
+    background-color: #222229!important;
     height: 50px;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin: 0;
 
 }
 
 /* expansion panel title on hover */
 .expansion-panel-1.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]){
-    font-weight: bolder!important;
-    background-color: #E6FFFF!important;
+    font-weight: bold!important;
+    background-color: #222229d2!important;
+    color: white!important;
 }
 
 /* when expanded do not have any extra spacing */
@@ -35,12 +40,17 @@
 
 /* expansion panel font manipulation */
 .expansion-panel-1 .mat-expansion-panel-header-title{
-    color: red;
+    margin: 0;
+
 }
 
 /* expansion panel title text */
 .expansion-panel-1 .mat-expansion-panel-header-title {
-    color: red;
+    color: #746D6D;
+}
+
+.expansion-panel-1 .mat-expansion-panel-header-title:hover {
+    color: white;
 }
 
 /* expansion panel description style */
@@ -52,5 +62,49 @@
 
 /* change padding in expansion toggle body  */
 ::ng-deep .expansion-panel-1 .mat-expansion-panel-body{
+    padding:0;
+}
+/* expansion panel title on hover */
+.expansion-panel-12.mat-expansion-panel .mat-expansion-panel-header{
+    background-color: lightgray!important;
+    height: 50px;
+    padding-left: 5px;
+    padding-right: 15px;
+    margin: 0;
+
+}
+
+/* expansion panel title on hover */
+.expansion-panel-2.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]){
+    font-weight: bolder!important;
+    color: orange;
+}
+
+/* when expanded do not have any extra spacing */
+.expansion-panel-2.mat-expansion-panel.mat-expanded {
+    margin: 0px;
+}
+
+/* expansion panel font manipulation */
+.expansion-panel-2 .mat-expansion-panel-header-title{
+    color: red;
+    margin: 0;
+
+}
+
+/* expansion panel title text */
+.expansion-panel-2 .mat-expansion-panel-header-title {
+    color: red;
+}
+
+/* expansion panel description style */
+.expansion-panel-2 .mat-expansion-panel-header-description {
+    color: blue!important;
+}
+
+/* youtube channel https://www.youtube.com/watch?v=jyOP7ksQNNU */
+
+/* change padding in expansion toggle body  */
+::ng-deep .expansion-panel-2 .mat-expansion-panel-body{
     padding:0;
 }
