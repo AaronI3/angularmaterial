@@ -33,7 +33,9 @@
     color: blue!important;
 }
 
-/* change padding in expansion toggle body */
+/* youtube channel https://www.youtube.com/watch?v=jyOP7ksQNNU */
+
+/* change padding in expansion toggle body  */
 ::ng-deep .expansion-panel-1 .mat-expansion-panel-body{
     padding:0;
 }
