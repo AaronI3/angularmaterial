@@ -1,16 +1,14 @@
 <mat-toolbar color="primary" class="mat-elevation-z7">
     <!-- this creates the icon at the left in the menu bar -->
-    <button routerLink="" mat-icon-button>
+    <button (click)="drawer.toggle()" mat-icon-button>
         <mat-icon>menu</mat-icon>
     </button>
 
-    <span>Material UI Tutorial</span>
+    <span>Innovation Industries</span>
 
     <!-- menu_bar_spacer adds the empty space and forces buttons to the sides of the page -->
-    <span class="menu_bar_spacer">Innovation Industries</span>
-
-
-
+    <span class="menu_bar_spacer"></span>
+    
     <!-- creating a multileveled button in the menu bar (v3;9:00)-->
     <button [matMenuTriggerFor]="lvl1master" mat-button>Master</button>
 
@@ -49,7 +47,7 @@
 
 <!-- sidenav container -->
 <mat-drawer-container class="sidnav-container" style="min-height: 100%;">
-    <mat-drawer class="drawer" mode="side" opened>
+    <mat-drawer #drawer mode="side" mode="over">
         <mat-accordion>
             <mat-expansion-panel class="expansion-panel-1" color="primary">
                 <mat-expansion-panel-header>
