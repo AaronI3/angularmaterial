@@ -17,6 +17,7 @@
     <button routerLink="input" mat-button>Input</button>
     <button routerLink="autocomplete" mat-button>Autocomplete</button>
     <button routerLink="expansion-panel" mat-button>E Panel</button>
+    <button routerLink="card" mat-button>Card</button>
     <button (click)="badgevisibility()" mat-mini-fab color="warn">
         <mat-icon matBadge="15" [matBadgeHidden]="badgevisibile" matBadgeSize="small"
             matBadgeColor="accent">notifications</mat-icon>
@@ -47,7 +48,7 @@
 
 <!-- sidenav container -->
 <mat-drawer-container class="sidnav-container" style="min-height: 100%;">
-    <mat-drawer #drawer mode="side" mode="over">
+    <mat-drawer #drawer opened mode="side">
         <mat-accordion>
             <mat-expansion-panel class="expansion-panel-1" color="primary">
                 <mat-expansion-panel-header>

@@ -12,6 +12,7 @@ import { MenubarComponent } from './component/menubar/menubar.component';
 
 import { HomeComponent } from './component/home/home.component';
 import { ExpansionPanelComponent } from './component/expansion-panel/expansion-panel.component';
+import { CardComponent } from './component/card/card.component';
 
 
 
@@ -22,7 +23,8 @@ import { ExpansionPanelComponent } from './component/expansion-panel/expansion-p
     AutocompleteComponent,
     MenubarComponent,
     HomeComponent,
-    ExpansionPanelComponent
+    ExpansionPanelComponent,
+    CardComponent
 
   ],
   imports: [
