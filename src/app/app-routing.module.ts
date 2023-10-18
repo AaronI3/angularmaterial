@@ -5,6 +5,8 @@ import { InputComponent } from './input/input.component';
 import { HomeComponent } from './component/home/home.component';
 import { ExpansionPanelComponent } from './component/expansion-panel/expansion-panel.component';
 import { CardComponent } from './component/card/card.component';
+import { SliderComponent } from './component/slider/slider.component';
+import { TableComponent } from './component/table/table.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path:'input',component:InputComponent},
   {path:'expansion-panel',component:ExpansionPanelComponent},
   {path:'card',component:CardComponent},
+  {path:'slider',component:SliderComponent},
+  {path:'table',component:TableComponent},
 
 ];
 

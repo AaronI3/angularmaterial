@@ -8,8 +8,12 @@ import { MatButtonModule } from "@angular/material/button"
 import { MatBadgeModule } from "@angular/material/badge"
 import { MatSidenavModule } from "@angular/material/sidenav"
 import { MatListModule } from "@angular/material/list"
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion'
+import { MatCardModule } from '@angular/material/card'
+import { MatSliderModule } from '@angular/material/slider'
+import { MatTableModule } from '@angular/material/table'
+import { MatSortModule } from '@angular/material/sort'
+import { MatPaginatorModule } from '@angular/material/paginator'
 
 @NgModule({
 exports:[
@@ -23,7 +27,11 @@ exports:[
     MatSidenavModule,
     MatListModule,
     MatExpansionModule,
-    MatCardModule
+    MatCardModule,
+    MatSliderModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
 ]
 }) 
 

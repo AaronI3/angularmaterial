@@ -1,0 +1,12 @@
+<h3>Basic Slider</h3>
+<mat-slider min="20" max="100" color="accent">
+    <input matSliderThumb [(ngModel)]="selectedvalue">
+</mat-slider>
+<br>
+<label>Selected slider value is {{selectedvalue}}</label>
+
+<h3>Range Slider</h3>
+<mat-slider>
+    <input matSliderStartThumb>
+    <input matSliderEndThumb>
+</mat-slider>
