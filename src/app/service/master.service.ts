@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { colorentity } from '../Entity/colorentity';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MasterService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
 
   //a  way to have the code be able to not be hard coded with values. 
@@ -18,6 +19,10 @@ export class MasterService {
       {code:'c3',name:'Green'},
       {code:'c4',name:'Cyan'},
     ]
+  }
+
+  GetCustomer(){
+    return this.http.get("http://localhost:3000/customer");
   }
 
 }

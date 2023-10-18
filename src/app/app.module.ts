@@ -13,6 +13,7 @@ import { ExpansionPanelComponent } from './component/expansion-panel/expansion-p
 import { CardComponent } from './component/card/card.component';
 import { SliderComponent } from './component/slider/slider.component';
 import { TableComponent } from './component/table/table.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -35,7 +36,8 @@ import { TableComponent } from './component/table/table.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
