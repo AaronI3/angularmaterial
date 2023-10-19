@@ -2,8 +2,57 @@
   "customer": [
     {
       "code": 1,
-      "name": "json-server",
+      "name": "Ricky",
       "phone": "82342345",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 2,
+      "name": "Bobby",
+      "phone": "64567848",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 3,
+      "name": "Rick",
+      "phone": "78997546",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 4,
+      "name": "Sanchez",
+      "phone": "12678999",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 5,
+      "name": "Morty",
+      "phone": "97834563",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 6,
+      "name": "Smith",
+      "phone": "45645323",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 7,
+      "name": "Gilbert",
+      "phone": "45643276",
+      "email": "aaron@email.com",
+      "status": "active"
+    },
+    {
+      "code": 8,
+      "name": "Joffrey",
+      "phone": "75645324",
       "email": "aaron@email.com",
       "status": "active"
     }
