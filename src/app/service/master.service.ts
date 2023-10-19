@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { colorentity } from '../Entity/colorentity';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from "rxjs";
+import { Customer } from '../Model/Customer';
 
 @Injectable({
   providedIn: 'root'
@@ -21,8 +23,8 @@ export class MasterService {
     ]
   }
 
-  GetCustomer(){
-    return this.http.get("http://localhost:3000/customer");
+  GetCustomer():Observable<Customer[]>{
+    return this.http.get<Customer[]>("http://localhost:3000/customer");
   }
 
 }
