@@ -14,11 +14,12 @@ export class TableComponent {
   dataSource : any;
   displayedColumns:string[]=['code','name','email','phone','status','action'];
 
+
+
   constructor(private service:MasterService){
     this.service.GetCustomer().subscribe(res=>{
-    this.dataSource= new MatTableDataSource<Customer>(this.customerList);
-
+      this.customerList = res;
+      this.dataSource= new MatTableDataSource<Customer>(this.customerList);
     });
   }
-
 }
