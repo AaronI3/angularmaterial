@@ -3,3 +3,67 @@
 
     flex: 1 1 auto;
 }
+.expansion-panel-1.mat-expansion-panel .mat-expansion-panel-header{
+
+    height: 50px;
+    /* padding-left: 5px;
+    padding-right: 15px;
+    margin: 0; */
+
+}
+/* when expanded do not have any extra spacing */
+.expansion-panel-1.mat-expansion-panel.mat-expanded {
+    margin: 0px;
+} 
+::ng-deep .expansion-panel-1 .mat-expansion-panel-body{
+    padding:0; 
+}
+
+/* 
+.sidnav-container{
+    width:100%;
+    
+}
+.drawer{
+    width:10%;
+    background: #222229;
+}
+.button-container{
+    justify-content:center;
+    text-align: center;
+} */
+/* expansion panel title on hover */
+/* .expansion-panel-1.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]){
+    font-weight: bold!important;
+    background-color: #222229d2!important;
+    color: white!important;
+} */
+
+/* when expanded do not have any extra spacing */
+/* .expansion-panel-1.mat-expansion-panel.mat-expanded {
+    margin: 0px;
+} */
+
+/* expansion panel font manipulation */
+/* .expansion-panel-1 .mat-expansion-panel-header-title{
+    margin: 0;
+
+} */
+
+/* expansion panel title text */
+/* .expansion-panel-1 .mat-expansion-panel-header-title {
+    color: #746D6D;
+} */
+/* 
+.expansion-panel-1 .mat-expansion-panel-header-title:hover {
+    color: white;
+} */
+
+/* expansion panel description style */
+/* .expansion-panel-1 .mat-expansion-panel-header-description {
+    color: blue!important;
+} */
+
+/* youtube channel https://www.youtube.com/watch?v=jyOP7ksQNNU */
+
+/* change padding in expansion toggle body  */

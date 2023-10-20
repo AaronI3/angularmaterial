@@ -1,17 +1,14 @@
-
 <mat-toolbar color="primary" class="mat-elevation-z7">
     <!-- this creates the icon at the left in the menu bar -->
-    <button routerLink="" mat-icon-button>
+    <button (click)="drawer.toggle()" mat-icon-button>
         <mat-icon>menu</mat-icon>
     </button>
 
-    <span>Material UI Tutorial</span>
+    <span style="padding-left: 10px;">Innovation Industries Incorporated</span>
 
     <!-- menu_bar_spacer adds the empty space and forces buttons to the sides of the page -->
-    <span class="menu_bar_spacer" >Innovation Industries</span>
-
-
-
+    <span class="menu_bar_spacer"></span>
+    
     <!-- creating a multileveled button in the menu bar (v3;9:00)-->
     <button [matMenuTriggerFor]="lvl1master" mat-button>Master</button>
 
@@ -19,8 +16,14 @@
     <button routerLink="" mat-button>Home</button>
     <button routerLink="input" mat-button>Input</button>
     <button routerLink="autocomplete" mat-button>Autocomplete</button>
+    <button routerLink="expansion-panel" mat-button>E Panel</button>
+    <button routerLink="card" mat-button>Card</button>
+    <button routerLink="slider" mat-button>Slider</button>
+    <button routerLink="table" mat-button>Table</button>
+    <button routerLink="formdesign" mat-button>Form</button>
     <button (click)="badgevisibility()" mat-mini-fab color="warn">
-        <mat-icon matBadge="15" [matBadgeHidden]="badgevisibile" matBadgeSize="small" matBadgeColor="accent">notifications</mat-icon>
+        <mat-icon matBadge="15" [matBadgeHidden]="badgevisibile" matBadgeSize="small"
+            matBadgeColor="accent">notifications</mat-icon>
     </button>
 
     <!-- populating what is in the top layer multileveled button master -->
@@ -43,3 +46,53 @@
         <button mat-menu-item>Software Eng.</button>
     </mat-menu>
 </mat-toolbar>
+
+
+
+<!-- sidenav container -->
+<mat-drawer-container class="sidnav-container" style="min-height: 100%;">
+    <mat-drawer #drawer opened mode="side">
+        <mat-accordion>
+            <mat-expansion-panel class="expansion-panel-1" color="primary">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <div style="padding-right: 4px;">
+                            <mat-icon>home</mat-icon>
+                        </div>
+                        Home
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel class="expansion-panel-1">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <div style="padding-right: 4px;"><mat-icon>accessibility_new</mat-icon></div> Customer Service
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p>This is the primary content of the panel.</p>
+                <mat-expansion-panel class="expansion-panel-1">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            This is the expansion title
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>This is the primary content of the panel.</p>
+                </mat-expansion-panel>
+            </mat-expansion-panel>
+            <mat-nav-list>
+                <mat-list-item>
+                    <mat-icon>home</mat-icon>
+                    Home
+                </mat-list-item>
+            </mat-nav-list>
+        </mat-accordion>
+    </mat-drawer>
+
+    <!-- main page container -->
+    <mat-drawer-content style="min-height: 100%;">
+        <div style="text-align: center; min-height:100%">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
