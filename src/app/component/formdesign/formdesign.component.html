@@ -43,12 +43,23 @@
             <mat-label>date of birth</mat-label>
             <input matInput [matDatepicker]="picker" placeholder="date of birth">  
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker>
-
-            </mat-datepicker>
+            <mat-hint>dd/mm/yyyy</mat-hint>
+            <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
+        <div>
+            <mat-radio-group>
+                <mat-radio-button value="Male" color="primary" >Male</mat-radio-button>
+                <mat-radio-button value="Female">Female</mat-radio-button>
+            </mat-radio-group>
+            <mat-checkbox color="warn">Is Active</mat-checkbox>
+        </div>
     </mat-card-content>
-    <mat-card-footer></mat-card-footer>
+    <mat-card-footer>
+        <div style="margin:1%; text-align: right;">
+            <button mat-raised-button color="primary">Save</button>
+            <button mat-raised-button color="warn">Clear</button>
+        </div>
+    </mat-card-footer>
 
 </mat-card>
