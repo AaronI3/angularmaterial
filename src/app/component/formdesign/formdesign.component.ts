@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class FormdesignComponent {
 
+  countryList=['USA','RUSSIA','CHINA','GREAT BRITIAN']
 }

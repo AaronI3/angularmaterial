@@ -19,6 +19,10 @@
     padding:0; 
 }
 
+.menu-button-link{
+    width: 100%;
+}
+
 /* 
 .sidnav-container{
     width:100%;
