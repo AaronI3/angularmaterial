@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formdesign',
@@ -9,4 +10,15 @@ export class FormdesignComponent {
 
   countryList=['USA','RUSSIA','CHINA','GREAT BRITIAN']
   termlist=['1001 Days','2234 days','3123 days','4123 days','5123 days']
+
+  constructor(private builder:FormBuilder){
+
+  }
+  customerform=this.builder.group({
+    name:this.builder.control('',Validators.required)
+  });
+  SaveCustomer(){
+
+  }
+
 }
