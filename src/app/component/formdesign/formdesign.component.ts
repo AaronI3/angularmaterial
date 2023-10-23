@@ -17,6 +17,10 @@ export class FormdesignComponent {
 
   customerform=this.builder.group({
     name:this.builder.control('',Validators.required),
+    email:this.builder.control('',Validators.required),
+    phone:this.builder.control('',Validators.required),
+    address:this.builder.control('',Validators.required),
+    country:this.builder.control('',Validators.required),
     term:this.builder.control('',Validators.compose([Validators.required]) ),
     terms:this.builder.control('',Validators.required ),
     dob:this.builder.control(new Date()),
@@ -27,6 +31,10 @@ export class FormdesignComponent {
   //what happens when the save button is clicked
   SaveCustomer(){
     console.log(this.customerform.value);
+  }
+
+  clearForm(){
+    this.customerform.reset();
   }
 
 }
