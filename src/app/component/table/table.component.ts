@@ -35,13 +35,16 @@ export class TableComponent {
   }
 
   Openpopup(){
-    this.dialog.open(PopupComponent,{
+    var _popup=this.dialog.open(PopupComponent,{
       width:'60%',
       enterAnimationDuration:'200ms',
       exitAnimationDuration:'200ms',
       data:{
         title:'User Edit'
       }
+    });
+    _popup.afterClosed().subscribe(item=>{
+      console.log(item);
     })
   }
 }
