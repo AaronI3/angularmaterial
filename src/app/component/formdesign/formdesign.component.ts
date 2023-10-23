@@ -14,9 +14,15 @@ export class FormdesignComponent {
   constructor(private builder:FormBuilder){
 
   }
+
   customerform=this.builder.group({
-    name:this.builder.control('',Validators.required)
+    name:this.builder.control('',Validators.required),
+    term:this.builder.control('',Validators.compose([Validators.required]) ),
+    terms:this.builder.control('',Validators.required ),
+    dob:this.builder.control(new Date()),
+    gender:this.builder.control('Male')
   });
+
   SaveCustomer(){
 
   }

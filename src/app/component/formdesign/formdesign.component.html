@@ -29,13 +29,13 @@
             </mat-form-field>
 
             <mat-form-field>
-                <mat-label>address</mat-label>
+                <mat-label>Address</mat-label>
                 <input matInput placeholder="address">
             </mat-form-field>
 
             <mat-form-field>
-                <mat-label>term</mat-label>
-                <input [matAutocomplete]="auto" matInput placeholder="term">
+                <mat-label>Term</mat-label>
+                <input formControlName="terms" [matAutocomplete]="auto" matInput placeholder="term">
                 <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
                     <mat-option *ngFor="let item of termlist" [value]="item">{{item}}</mat-option>
 
@@ -44,14 +44,14 @@
 
             <mat-form-field>
                 <mat-label>date of birth</mat-label>
-                <input matInput [matDatepicker]="picker" placeholder="date of birth">
+                <input formControlName="dob" matInput [matDatepicker]="picker" placeholder="date of birth">
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-hint>dd/mm/yyyy</mat-hint>
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
 
             <div>
-                <mat-radio-group>
+                <mat-radio-group formControlName="gender">
                     <mat-radio-button value="Male" color="primary">Male</mat-radio-button>
                     <mat-radio-button value="Female">Female</mat-radio-button>
                 </mat-radio-group>
