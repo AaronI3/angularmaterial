@@ -20,6 +20,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from "@angular/material/select";
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
 exports:[
@@ -43,7 +44,9 @@ exports:[
     MatNativeDateModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule,
+
 ]
 }) 
 

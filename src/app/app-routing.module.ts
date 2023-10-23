@@ -8,6 +8,7 @@ import { CardComponent } from './component/card/card.component';
 import { SliderComponent } from './component/slider/slider.component';
 import { TableComponent } from './component/table/table.component';
 import { FormdesignComponent } from './component/formdesign/formdesign.component';
+import { PopupComponent } from './component/popup/popup.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'slider',component:SliderComponent},
   {path:'table',component:TableComponent},
   {path:'formdesign',component:FormdesignComponent},
+  {path:'popup',component:PopupComponent},
 
 ];
 

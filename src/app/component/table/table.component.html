@@ -1,8 +1,12 @@
 <mat-card>
     <mat-card-header>
-        <mat-form-field>
-            <input matInput (keyup)='FilterChange($event)' placeholder="Enter the text">
-        </mat-form-field>
+        <div class="header-spreader">
+            <mat-form-field>
+                <input matInput (keyup)='FilterChange($event)' placeholder="Enter the text">
+            </mat-form-field>
+            <button mat-raised-button (click)="Openpopup()" color="primary">Add Person</button>
+        </div>
+        
     </mat-card-header>
     <mat-card-content>
         <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z3">
