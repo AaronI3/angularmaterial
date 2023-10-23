@@ -39,7 +39,9 @@ export class TableComponent {
       width:'60%',
       enterAnimationDuration:'200ms',
       exitAnimationDuration:'200ms',
-
+      data:{
+        title:'User Edit'
+      }
     })
   }
 }

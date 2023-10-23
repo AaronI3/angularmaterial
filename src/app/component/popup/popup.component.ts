@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-popup',
   templateUrl: './popup.component.html',
   styleUrls: ['./popup.component.css']
 })
-export class PopupComponent {
+export class PopupComponent implements OnInit {
+  inputdata:any;
 
-  constructor(private ref:MatDialogRef<PopupComponent>){
+  constructor(@Inject(MAT_DIALOG_DATA) public data:any, private ref:MatDialogRef<PopupComponent>){
 
   }
-  
+  ngOnInit(): void {
+    this.inputdata=this.data;
+  }
+
   closePopup(){
     this.ref.close();
   }
