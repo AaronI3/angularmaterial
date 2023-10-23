@@ -20,11 +20,13 @@ export class FormdesignComponent {
     term:this.builder.control('',Validators.compose([Validators.required]) ),
     terms:this.builder.control('',Validators.required ),
     dob:this.builder.control(new Date()),
-    gender:this.builder.control('Male')
+    gender:this.builder.control('Male'),
+    status:this.builder.control(true)
   });
 
+  //what happens when the save button is clicked
   SaveCustomer(){
-
+    console.log(this.customerform.value);
   }
 
 }
