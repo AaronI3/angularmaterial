@@ -36,7 +36,9 @@ export class TableComponent {
 
   Openpopup(){
     this.dialog.open(PopupComponent,{
-      width:'60%'
+      width:'60%',
+      enterAnimationDuration:'200ms',
+      exitAnimationDuration:'200ms',
 
     })
   }
