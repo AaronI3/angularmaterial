@@ -37,7 +37,7 @@ export class TableComponent {
   Openpopup(){
     this.dialog.open(PopupComponent,{
       width:'60%',
-      height:'20%'
+      height:'40%'
 
     })
   }
