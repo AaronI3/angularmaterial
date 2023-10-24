@@ -32,29 +32,19 @@ export class PopupComponent implements OnInit {
   }
 
   myForm = this.builder.group({
-    code:this.builder.control(0),
-    name:this.builder.control(''),
-    email:this.builder.control(''),
-    phone:this.builder.control(''),
-    status:this.builder.control(true),
-    id:this.builder.control(0)
+    name:this.builder.control('',Validators.required),
+    email:this.builder.control('',Validators.required),
+    phone:this.builder.control('',Validators.required),
+    status:this.builder.control(true,Validators.required),
   
   });
 
   Saveuser(){
     let v = this.myForm.value;
-    let l:Observable<Customer[]> = this.service.GetCustomer();
-    let s;
-    l.subscribe((customers:Customer[])=>{
-      let size = customers.length;
-      v.id=size+1;
-      v.code=size+1;
 
-      this.service.SaveCustomer(v).subscribe(res=>{
-        this.closePopup();
-      })
-    
 
+    this.service.SaveCustomer(v).subscribe(res=>{
+      this.closePopup();
     })
   }
 }
