@@ -38,15 +38,25 @@ export class TableComponent {
     this.dataSource.filter=value;
   }
 
-  Openpopup(){
+  editCustomer(code:any){
+    this.Openpopup(code,'Edit Customer');
+  }
+
+  addCustomer(){
+    this.Openpopup(0,'Add Customer')
+  }
+
+  Openpopup(code:any,title:any){
     var _popup=this.dialog.open(PopupComponent,{
       width:'60%',
       enterAnimationDuration:'200ms',
       exitAnimationDuration:'200ms',
       data:{
-        title:'User Edit'
+        title:title,
+        code:code
       }
     });
+
     _popup.afterClosed().subscribe(item=>{
       this.LoadCustomer();
       //console.log(item);

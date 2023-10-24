@@ -33,6 +33,6 @@ export class MasterService {
   }
 
   GetCustomerByCode(code:any){
-    return this.http.get("http://localhost:3000/customer"+code);
+    return this.http.get(`http://localhost:3000/customer/`+code);
   }
 }
