@@ -21,6 +21,10 @@ export class TableComponent {
   @ViewChild(MatSort) sort !:MatSort;
 
   constructor(private service:MasterService,private dialog:MatDialog){
+    this.LoadCustomer();
+  }
+
+  LoadCustomer(){
     this.service.GetCustomer().subscribe(res=>{
       this.customerList = res;
       this.dataSource= new MatTableDataSource<Customer>(this.customerList);
@@ -44,7 +48,8 @@ export class TableComponent {
       }
     });
     _popup.afterClosed().subscribe(item=>{
-      console.log(item);
+      this.LoadCustomer();
+      //console.log(item);
     })
   }
 }
