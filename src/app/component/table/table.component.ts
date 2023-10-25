@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Customer } from 'src/app/Model/Customer';
 import { MasterService } from 'src/app/service/master.service';
 import { PopupComponent } from '../popup/popup.component';
+import { UserDetailComponent } from '../user-detail/user-detail.component';
 
 @Component({
   selector: 'app-table',
@@ -39,15 +40,19 @@ export class TableComponent {
   }
 
   editCustomer(code:any){
-    this.Openpopup(code,'Edit Customer');
+    this.Openpopup(code,'Edit Customer',PopupComponent);
+  }
+
+  displayCustomer(code:any){
+    this.Openpopup(code,'Customer Details',UserDetailComponent);
   }
 
   addCustomer(){
-    this.Openpopup(0,'Add Customer')
+    this.Openpopup(0,'Add Customer',PopupComponent)
   }
 
-  Openpopup(code:any,title:any){
-    var _popup=this.dialog.open(PopupComponent,{
+  Openpopup(code:any,title:any,component:any){
+    var _popup=this.dialog.open(component,{
       width:'60%',
       enterAnimationDuration:'200ms',
       exitAnimationDuration:'200ms',
