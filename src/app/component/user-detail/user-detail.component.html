@@ -1,10 +1,13 @@
-<form [formGroup]="detailsForm">
-    <h1 mat-dialog-title>Customer Details</h1>
-    <div mat-dialog-content>
-        <mat-form-field>
-            
-        </mat-form-field>
-        
-    </div>
-</form>
 
+<h1 mat-dialog-title>{{customerDetails.title}}</h1>
+<div mat-dialog-content>
+    <h2>Name:<br><h4>{{display.name}}</h4></h2> 
+    <h2>Email:<br><h4>{{display.email}}</h4></h2> 
+    <h2>Phone:<br><h4>{{display.phone}}</h4></h2> 
+    <h2>Status:<br><h4>{{display.status}}</h4></h2> 
+    
+    <div mat-dialog-actions>
+        <!-- <button mat-raised-button (click)="closePopup()" color="accent">Close</button> -->
+        <button mat-raised-button [mat-dialog-close]="closemessage" color="warn">Cancel</button>
+    </div>
+</div>
