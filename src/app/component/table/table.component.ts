@@ -49,7 +49,7 @@ export class TableComponent {
   }
 
   deleteCustomer(code:any){
-    console.log(code);
+    console.log("deleteCustomer() in table.componenet.ts"+code);
     this.Openpopup(code,'Delete Customer',DeleteComponent);
   }
 

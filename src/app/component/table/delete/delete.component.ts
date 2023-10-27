@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MasterService } from 'src/app/service/master.service';
 
 @Component({
@@ -8,9 +9,11 @@ import { MasterService } from 'src/app/service/master.service';
 })
 export class DeleteComponent implements OnInit {
 
+  code:any = this.data;
+
   constructor(
     //injects the data from the parent component
-    // @Inject(MAT_DIALOG_DATA) public data:any,
+    @Inject(MAT_DIALOG_DATA) public data:any,
 
     //injects the service to be used
     private service:MasterService,
@@ -21,13 +24,13 @@ export class DeleteComponent implements OnInit {
   ){}
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.code = this.data;
   }
 
-
-
-  deleteUser(){
-    this.service.DeleteCustomer(this.customerDetails.code);
+  deleteUser(code:any) {
+    console.log(code.code);
+    this.service.DeleteCustomer(code.code);
   }
+
 
 }

@@ -37,6 +37,7 @@ export class MasterService {
   }
 
   DeleteCustomer(code:any){
+    console.log(`http://localhost:3000/customer/`+code);
     return this.http.delete(`http://localhost:3000/customer/`+code);
   }
 
