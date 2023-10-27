@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormdesignComponent } from './component/formdesign/formdesign.component';
 import { PopupComponent } from './component/popup/popup.component';
 import { UserDetailComponent } from './component/user-detail/user-detail.component';
+import { DeleteComponent } from './component/table/delete/delete.component';
 
 
 
@@ -34,6 +35,7 @@ import { UserDetailComponent } from './component/user-detail/user-detail.compone
     FormdesignComponent,
     PopupComponent,
     UserDetailComponent,
+    DeleteComponent,
 
   ],
   imports: [

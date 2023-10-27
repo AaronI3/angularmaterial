@@ -7,6 +7,7 @@ import { Customer } from 'src/app/Model/Customer';
 import { MasterService } from 'src/app/service/master.service';
 import { PopupComponent } from '../popup/popup.component';
 import { UserDetailComponent } from '../user-detail/user-detail.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @Component({
   selector: 'app-table',
@@ -47,13 +48,20 @@ export class TableComponent {
     this.Openpopup(code,'Customer Details',UserDetailComponent);
   }
 
+  deleteCustomer(code:any){
+    console.log(code);
+    this.Openpopup(code,'Delete Customer',DeleteComponent);
+  }
+
   addCustomer(){
     this.Openpopup(0,'Add Customer',PopupComponent)
   }
 
+  
+
   Openpopup(code:any,title:any,component:any){
     var _popup=this.dialog.open(component,{
-      width:'60%',
+      width:'40%',
       enterAnimationDuration:'200ms',
       exitAnimationDuration:'200ms',
       data:{

@@ -9,6 +9,8 @@ import { SliderComponent } from './component/slider/slider.component';
 import { TableComponent } from './component/table/table.component';
 import { FormdesignComponent } from './component/formdesign/formdesign.component';
 import { PopupComponent } from './component/popup/popup.component';
+import { DeleteComponent } from './component/table/delete/delete.component';
+
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -20,6 +22,7 @@ const routes: Routes = [
   {path:'table',component:TableComponent},
   {path:'formdesign',component:FormdesignComponent},
   {path:'popup',component:PopupComponent},
+  {path:'delete',component:DeleteComponent},
 
 ];
 

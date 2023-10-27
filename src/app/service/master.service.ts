@@ -35,4 +35,9 @@ export class MasterService {
   GetCustomerByCode(code:any){
     return this.http.get(`http://localhost:3000/customer/`+code);
   }
+
+  DeleteCustomer(code:any){
+    return this.http.delete(`http://localhost:3000/customer/`+code);
+  }
+
 }
